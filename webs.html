@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reidi Studios | Páginas Web</title>
+    <style>
+        :root {
+            --bg-deep: #05050b;
+            --bg-card: #0e0717;
+            --accent-purple: #8b5cf6;
+            --accent-glow: rgba(139, 92, 246, 0.3);
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+            --border-color: #2e1065;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body {
+            background-color: var(--bg-deep);
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(30, 27, 75, 0.4) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(88, 28, 135, 0.2) 0%, transparent 40%);
+        }
+        header {
+            background: rgba(5, 5, 11, 0.85);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo { font-size: 1.25rem; font-weight: bold; letter-spacing: 2px; color: var(--text-main); text-shadow: 0 0 10px var(--accent-purple); }
+        nav { display: flex; gap: 1.5rem; }
+        nav a { color: var(--text-muted); text-decoration: none; font-size: 0.95rem; transition: color 0.3s; }
+        nav a:hover, nav a.active { color: var(--accent-purple); text-shadow: 0 0 8px var(--accent-glow); }
+        
+        .container { max-width: 1100px; margin: 0 auto; padding: 4rem 2rem; }
+        h2 { font-size: 2.5rem; margin-bottom: 2rem; border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem; display: inline-block; }
+        
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; }
+        .card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+        }
+        .card:hover { transform: translateY(-5px); border-color: var(--accent-purple); }
+        .card h3 { margin-bottom: 1rem; color: #fff; font-size: 1.35rem; }
+        .card p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem; line-height: 1.5; }
+        
+        .btn {
+            background-color: var(--accent-purple);
+            color: white;
+            padding: 0.6rem 1.2rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 15px var(--accent-glow);
+        }
+        .btn:hover { background-color: #7c3aed; box-shadow: 0 0 25px var(--accent-purple); }
+        
+        footer { text-align: center; padding: 1.5rem; border-top: 1px solid var(--border-color); color: var(--text-muted); font-size: 0.9rem; background: rgba(5, 5, 11, 0.9); }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">REIDI STUDIOS</div>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="bots.html">Telegram Bots</a>
+            <a href="webs.html" class="active">Páginas Web</a>
+            <a href="siguenos.html">Síguenos</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Páginas Web Desarrolladas</h2>
+        <div class="grid">
+            <div class="card">
+                <div>
+                    <h3>⚡ Pokémon Eclipse Tropical</h3>
+                    <p>Plataforma interactiva de datos y pokedex con un diseño visual detallado, limpio y enfocado en la experiencia temática.</p>
+                </div>
+                <a href="https://reidi-studio.github.io/Pokemon-Eclipse-Tropical/" target="_blank" class="btn">Visitar Sitio</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Reidi Studios. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
