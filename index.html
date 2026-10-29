@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReidI Studios | Innovación y Desarrollo</title>
+    <style>
+        :root {
+            --bg-deep: #05050b;
+            --bg-card: #0e0717;
+            --accent-purple: #8b5cf6;
+            --accent-glow: rgba(139, 92, 246, 0.3);
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+            --border-color: #2e1065;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-deep);
+            color: var(--text-main);
+            min-height: 100vh;
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(30, 27, 75, 0.4) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(88, 28, 135, 0.2) 0%, transparent 40%);
+        }
+
+        /* Header / Navbar */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(5, 5, 11, 0.85);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            color: var(--text-main);
+            text-shadow: 0 0 10px var(--accent-purple);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--accent-purple);
+            text-shadow: 0 0 8px var(--accent-glow);
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 7rem 2rem 3rem 2rem;
+        }
+
+        section {
+            margin-bottom: 4rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+
+        /* Hero Section (Main) */
+        .hero {
+            text-align: center;
+            padding: 4rem 1rem;
+            background: linear-gradient(135deg, rgba(14, 7, 23, 0.8), rgba(30, 27, 75, 0.3));
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            box-shadow: 0 0 25px rgba(139, 92, 246, 0.1);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(to right, #fff, var(--accent-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto 2rem auto;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-purple);
+            color: white;
+            padding: 0.75rem 1.75rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 15px var(--accent-glow);
+        }
+
+        .btn:hover {
+            background-color: #7c3aed;
+            box-shadow: 0 0 25px var(--accent-purple);
+            transform: translateY(-2px);
+        }
+
+        /* Grid Layouts for Bots and Web */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 1.5rem;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-purple);
+        }
+
+        .card h3 {
+            margin-bottom: 0.75rem;
+            color: #fff;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 1.25rem;
+        }
+
+        /* Footer / Links */
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            background-color: rgba(5, 5, 11, 0.9);
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                display: none; /* Simplificado para móviles si gustas, o puedes ajustarlo */
+            }
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">REIDI STUDIOS</div>
+        <nav>
+            <ul>
+                <li><a href="#main">Inicio</a></li>
+                <li><a href="#bots">Telegram Bots</a></li>
+                <li><a href="#webs">Páginas Web</a></li>
+                <li><a href="#siguenos">Síguenos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- SECCIÓN MAIN -->
+        <section id="main" class="hero">
+            <h1>ReidI Studios</h1>
+            <p>Desarrollo de software, herramientas digitales, experiencias interactivas y bots para Telegram con tecnología y estilo propio.</p>
+            <a href="#bots" class="btn">Explorar Proyectos</a>
+        </section>
+
+        <!-- SECCIÓN TELEGRAM BOTS (3 BOTS) -->
+        <section id="bots">
+            <h2>Telegram Bots</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>🤖 Bot de Telegram #1</h3>
+                    <p>Primer bot oficial de la casa, diseñado para ofrecer funciones rápidas y automatización inteligente a la comunidad.</p>
+                    <a href="#" class="btn" style="padding: 0.5rem 1rem; font-size: 0.9rem;">Ver Bot</a>
+                </div>
+                <div class="card">
+                    <h3>🤖 Bot de Telegram #2</h3>
+                    <p>Segundo sistema automatizado enfocado en utilidades y gestión multimedia dentro de la plataforma de mensajería.</p>
+                    <a href="#" class="btn" style="padding: 0.5rem 1rem; font-size: 0.9rem;">Ver Bot</a>
+                </div>
+                <div class="card">
+                    <h3>🕵️‍♂️ El Impostor Bot</h3>
+                    <p>El juego definitivo de deducción y mentiras en formato local para Telegram. ¡Configura partidas, usa paquetes de palabras y descubre al impostor!</p>
+                    <a href="https://t.me/reidistudios67" target="_blank" class="btn" style="padding: 0.5rem 1rem; font-size: 0.9rem;">Abrir Bot</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN PÁGINAS WEB -->
+        <section id="webs">
+            <h2>Páginas Web</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>⚡ Pokémon Eclipse Tropical</h3>
+                    <p>Plataforma interactiva de datos y pokedex con un diseño visual detallado y mecánicas cuidadas al milímetro.</p>
+                    <a href="https://reidi-studio.github.io/Pokemon-Eclipse-Tropical/data/pokedex/pignite.html" target="_blank" class="btn" style="padding: 0.5rem 1rem; font-size: 0.9rem;">Visitar Sitio</a>
+                </div>
+                <div class="card">
+                    <h3>🏛️ About-We (Versión Anterior)</h3>
+                    <p>Nuestra web de presentación clásica, inspiradora de la estructura base y los inicios de nuestros portales digitales.</p>
+                    <a href="https://reidi-studios.github.io/About-We/" target="_blank" class="btn" style="padding: 0.5rem 1rem; font-size: 0.9rem;">Visitar Sitio</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN SÍGUENOS -->
+        <section id="siguenos">
+            <h2>Síguenos</h2>
+            <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Mantente al tanto de todas las actualizaciones, lanzamientos y herramientas de ReidI Studios en nuestras redes oficiales.</p>
+            <div class="social-links">
+                <a href="https://whatsapp.com/channel/0029Vb8YbyV47Xe3bksZ2R18" target="_blank" class="btn">Canal de WhatsApp</a>
+                <a href="https://t.me/reidistudios67" target="_blank" class="btn">Canal de Telegram</a>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 ReidI Studios. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
