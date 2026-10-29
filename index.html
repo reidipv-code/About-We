@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reidi Studios | Inicio</title>
+    <style>
+        :root {
+            --bg-deep: #05050b;
+            --bg-card: #0e0717;
+            --accent-purple: #8b5cf6;
+            --accent-glow: rgba(139, 92, 246, 0.3);
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+            --border-color: #2e1065;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body {
+            background-color: var(--bg-deep);
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(30, 27, 75, 0.4) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(88, 28, 135, 0.2) 0%, transparent 40%);
+        }
+        header {
+            background: rgba(5, 5, 11, 0.85);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo { font-size: 1.25rem; font-weight: bold; letter-spacing: 2px; color: var(--text-main); text-shadow: 0 0 10px var(--accent-purple); }
+        nav { display: flex; gap: 1.5rem; }
+        nav a { color: var(--text-muted); text-decoration: none; font-size: 0.95rem; transition: color 0.3s; }
+        nav a:hover, nav a.active { color: var(--accent-purple); text-shadow: 0 0 8px var(--accent-glow); }
+        
+        .container { max-width: 900px; margin: 0 auto; padding: 4rem 2rem; text-align: center; }
+        .hero {
+            background: linear-gradient(135deg, rgba(14, 7, 23, 0.9), rgba(30, 27, 75, 0.4));
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 4rem 2rem;
+            box-shadow: 0 0 30px rgba(139, 92, 246, 0.15);
+        }
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(to right, #fff, var(--accent-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        p { color: var(--text-muted); font-size: 1.15rem; max-width: 600px; margin: 0 auto 2.5rem auto; line-height: 1.6; }
+        .btn-group { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+        .btn {
+            background-color: var(--accent-purple);
+            color: white;
+            padding: 0.75rem 1.75rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 15px var(--accent-glow);
+        }
+        .btn:hover { background-color: #7c3aed; box-shadow: 0 0 25px var(--accent-purple); transform: translateY(-2px); }
+        .btn-outline { background: transparent; border: 1px solid var(--border-color); color: var(--text-main); }
+        .btn-outline:hover { border-color: var(--accent-purple); background: rgba(139, 92, 246, 0.1); }
+        
+        footer { text-align: center; padding: 1.5rem; border-top: 1px solid var(--border-color); color: var(--text-muted); font-size: 0.9rem; background: rgba(5, 5, 11, 0.9); }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">REIDI STUDIOS</div>
+        <nav>
+            <a href="index.html" class="active">Inicio</a>
+            <a href="bots.html">Telegram Bots</a>
+            <a href="webs.html">Páginas Web</a>
+            <a href="siguenos.html">Síguenos</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section class="hero">
+            <h1>Reidi Studios</h1>
+            <p>Innovación, desarrollo de software, bots interactivos para Telegram y experiencias digitales diseñadas con precisión.</p>
+            <div class="btn-group">
+                <a href="bots.html" class="btn">Ver Bots</a>
+                <a href="webs.html" class="btn btn-outline">Ver Páginas Web</a>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Reidi Studios. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
