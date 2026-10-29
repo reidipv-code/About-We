@@ -36,20 +36,21 @@
             align-items: center;
         }
         .logo { font-size: 1.25rem; font-weight: bold; letter-spacing: 2px; color: var(--text-main); text-shadow: 0 0 10px var(--accent-purple); }
-        nav { display: flex; gap: 1.5rem; }
+        nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
         nav a { color: var(--text-muted); text-decoration: none; font-size: 0.95rem; transition: color 0.3s; }
         nav a:hover, nav a.active { color: var(--accent-purple); text-shadow: 0 0 8px var(--accent-glow); }
         
-        .container { max-width: 900px; margin: 0 auto; padding: 4rem 2rem; text-align: center; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 4rem 2rem; text-align: center; }
         .hero {
             background: linear-gradient(135deg, rgba(14, 7, 23, 0.9), rgba(30, 27, 75, 0.4));
             border: 1px solid var(--border-color);
             border-radius: 16px;
             padding: 4rem 2rem;
             box-shadow: 0 0 30px rgba(139, 92, 246, 0.15);
+            margin-bottom: 3rem;
         }
         h1 {
-            font-size: 3.5rem;
+            font-size: 3.2rem;
             margin-bottom: 1rem;
             background: linear-gradient(to right, #fff, var(--accent-purple));
             -webkit-background-clip: text;
@@ -70,6 +71,22 @@
         .btn:hover { background-color: #7c3aed; box-shadow: 0 0 25px var(--accent-purple); transform: translateY(-2px); }
         .btn-outline { background: transparent; border: 1px solid var(--border-color); color: var(--text-main); }
         .btn-outline:hover { border-color: var(--accent-purple); background: rgba(139, 92, 246, 0.1); }
+
+        /* Stats Grid Extra */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+        .stat-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+        }
+        .stat-card h3 { font-size: 2rem; color: var(--accent-purple); margin-bottom: 0.5rem; text-shadow: 0 0 10px var(--accent-glow); }
+        .stat-card p { color: var(--text-muted); font-size: 0.9rem; margin: 0; }
         
         footer { text-align: center; padding: 1.5rem; border-top: 1px solid var(--border-color); color: var(--text-muted); font-size: 0.9rem; background: rgba(5, 5, 11, 0.9); }
     </style>
@@ -79,6 +96,7 @@
         <div class="logo">REIDI STUDIOS</div>
         <nav>
             <a href="index.html" class="active">Inicio</a>
+            <a href="about.html">Acerca de</a>
             <a href="bots.html">Telegram Bots</a>
             <a href="webs.html">Páginas Web</a>
             <a href="siguenos.html">Síguenos</a>
@@ -94,10 +112,26 @@
                 <a href="webs.html" class="btn btn-outline">Ver Páginas Web</a>
             </div>
         </section>
+
+        <!-- Nueva Sección de Estadísticas -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h3>3+</h3>
+                <p>Bots Activos en Telegram</p>
+            </div>
+            <div class="stat-card">
+                <h3>1+</h3>
+                <p>Mundos y Universos Web</p>
+            </div>
+            <div class="stat-card">
+                <h3>100%</h3>
+                <p>Pasión por el Software</p>
+            </div>
+        </div>
     </div>
 
     <footer>
-        <p>&copy; 2026 Reidi Studios. Todos los derechos reservados.</p>
+        <p>&copy; 2026 Reidi Studios. Creado con código limpio desde Cuba 🇨🇺. Todos los derechos reservados.</p>
     </footer>
 </body>
 </html>
