@@ -44,7 +44,7 @@
         h2 { font-size: 2.5rem; margin-bottom: 1rem; border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem; display: inline-block; }
         p.subtitle { color: var(--text-muted); font-size: 1.05rem; margin-bottom: 3rem; }
         
-        .donate-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
+        .donate-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; justify-content: center; }
         .donate-card {
             background-color: var(--bg-card);
             border: 1px solid var(--border-color);
@@ -72,6 +72,7 @@
             width: 100%;
             transition: all 0.3s ease;
             box-shadow: 0 0 15px var(--accent-glow);
+            display: inline-block;
         }
         .btn:hover { background-color: #7c3aed; box-shadow: 0 0 25px var(--accent-purple); }
         
@@ -93,25 +94,23 @@
 
     <div class="container">
         <h2>Apoyar a Reidi Studios</h2>
-        <p class="subtitle">Tus contribuciones nos ayudan a mantener los proyectos activos y seguir creando herramientas digitales.</p>
+        <p class="subtitle">Conoce más sobre nuestros proyectos o apoya directamente a través de Telegram.</p>
         
         <div class="donate-grid">
-            <!-- Opción 1: Estrellas de Telegram (Lo más fácil y directo) -->
             <div class="donate-card">
                 <div>
                     <h3>⭐ Telegram Stars</h3>
-                    <p style="margin-top: 0.8rem;">Apoya usando estrellas de Telegram de forma rápida y directa con nuestro bot.</p>
+                    <p style="margin-top: 0.8rem;">Apoya usando estrellas de Telegram mediante nuestro bot oficial.</p>
                 </div>
-                <a href="https://t.me/RSImpostorBot" target="_blank" class="btn">Donar en el Bot</a>
+                <a href="https://t.me/RSImpostorBot" target="_blank" class="btn">Ir al Bot</a>
             </div>
             
-            <!-- Opción 2: Tarjeta / Enlace de pago externo (Por si usas Ko-fi o pasarela externa) -->
             <div class="donate-card">
                 <div>
-                    <h3>💳 Tarjeta / Otro método</h3>
-                    <p style="margin-top: 0.8rem;">Si prefieres aportar mediante tarjeta de crédito u otros medios externos compatibles.</p>
+                    <h3>📖 Conoce About-We</h3>
+                    <p style="margin-top: 0.8rem;">Visita la página oficial de información detallada del proyecto.</p>
                 </div>
-                <a href="https://t.me/reidistudios67" target="_blank" class="btn">Consultar por Canal</a>
+                <a href="https://reidipv-code.github.io/About-We/index.html" target="_blank" class="btn">Ver About-We</a>
             </div>
         </div>
     </div>
